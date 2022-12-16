@@ -1,23 +1,19 @@
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class GameTest {
     @Test
     void factorizerTest() {
-        int arrayTest[] = {1,2,3,4,5,6,7,8,9,10,11,12,13};
-        int arrayTestResult[] = {1,2,3,4,5,5,7,6,6,7,11,8,13};
-        for (int i=0; i<arrayTest.length; i++) {
-            assertEquals(arrayTestResult[i],Game.factorizer(arrayTest[i]));
-        }
+        int factorizerTest = 6;
+        int factorizerTestResult = 5;
+        assertEquals(factorizerTestResult,Game.factorizer(factorizerTest));
     }
 
     @Test
     void romanicToNumTest() {
-        String arrayTest[] = {"I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII","XIII"};
-        int arrayTestResult[] = {1,2,3,4,5,6,7,8,9,10,11,12,13};
-        for (int i=0; i<arrayTest.length; i++) {
-            assertEquals(arrayTestResult[i], Game.romanicToInteger(arrayTest[i]));
-        }
+        String arrayTest = "II";
+        int arrayTestResult =2;
+        assertEquals(arrayTestResult, Game.romanicToInteger(arrayTest));
     }
 
     @Test
@@ -25,6 +21,7 @@ class GameTest {
         String romanicPointsP1 = "VI";
         String romanicPointsP2 = "XIII";
         Game juego = new Game(romanicPointsP1,romanicPointsP2);
+        int i = juego.coinsEarnedP1;
         assertEquals(juego.coinsEarnedP1,5);
         assertEquals(juego.coinsEarnedP2,13);
     }
