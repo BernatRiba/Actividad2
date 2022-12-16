@@ -21,7 +21,6 @@ class GameTest {
         String romanicPointsP1 = "VI";
         String romanicPointsP2 = "XIII";
         Game juego = new Game(romanicPointsP1,romanicPointsP2);
-        int i = juego.coinsEarnedP1;
         assertEquals(juego.coinsEarnedP1,5);
         assertEquals(juego.coinsEarnedP2,13);
     }
